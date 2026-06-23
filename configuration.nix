@@ -73,6 +73,7 @@
   bat
   ghostty
   cmatrix
+  firefox
   ];
 
 nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -85,7 +86,10 @@ nix.settings.experimental-features = [ "nix-command" "flakes" ];
   # };
 
   # List services that you want to enable:
-
+  services = {
+  desktopManager.plasma6.enable = true;
+  displayManager.sddm.enable = true;
+ };
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
 
